@@ -10,7 +10,7 @@ if (isset($_GET['download']) && $_GET['download'] === 'csv') {
     $output = fopen('php://output', 'w');
 
     fputcsv($output, [
-        'Complaint ID', 'Student', 'Category', 'Building',
+        'Complaint ID', 'Student', 'Category','Description', 'Building',
         'Location', 'Status', 'Priority', 'Date'
     ]);
 
