@@ -15,14 +15,15 @@ if (isset($_GET['download']) && $_GET['download'] === 'csv') {
     ]);
 
     $result = $conn->query(
-        "SELECT c.id, u.name, c.category, b.building_name,
-                l.location_name, c.status, c.priority, c.created_at
-         FROM complaints c
-         JOIN users u ON c.student_id = u.id
-         JOIN locations l ON c.location_id = l.id
-         JOIN buildings b ON l.building_id = b.id
-         ORDER BY c.created_at DESC"
-    );
+    "SELECT c.id, u.name, c.category, c.description,
+            b.building_name, l.location_name,
+            c.status, c.priority, c.created_at
+     FROM complaints c
+     JOIN users u ON c.student_id = u.id
+     JOIN locations l ON c.location_id = l.id
+     JOIN buildings b ON l.building_id = b.id
+     ORDER BY c.id ASC"
+);
 
     while ($row = $result->fetch_assoc()) {
         fputcsv($output, $row);
