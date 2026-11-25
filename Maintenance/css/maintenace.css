@@ -1,0 +1,291 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F0F3FF;
+    color: #111827;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.05);
+}
+
+.logo {
+    padding: 10px 12px 35px;
+}
+
+.logo h2 {
+    color: #4F46E5;
+    font-size: 21px;
+}
+
+.logo p {
+    color: #64748B;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a,
+.logout {
+    text-decoration: none;
+    color: #64748B;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #EEF2FF;
+    color: #4F46E5;
+}
+
+.logout {
+    margin-top: auto;
+    color: #DC2626;
+}
+
+.logout:hover {
+    background: #FEF2F2;
+}
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h2 {
+    font-size: 23px;
+}
+
+.topbar p,
+.welcome-section p {
+    color: #64748B;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    background: #4F46E5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Welcome */
+
+.welcome-section {
+    background: linear-gradient(120deg, #4F46E5, #089B91);
+    color: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.welcome-section p {
+    color: #E0E7FF;
+}
+
+/* Statistics */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    border-left: 5px solid;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: #64748B;
+}
+
+.stat-card h1 {
+    font-size: 30px;
+    margin: 15px 0 8px;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #64748B;
+}
+
+.purple {
+    border-color: #4F46E5;
+}
+
+.orange {
+    border-color: #F59E0B;
+}
+
+.teal {
+    border-color: #089B91;
+}
+
+.green {
+    border-color: #16A34A;
+}
+
+/* Complaints Table */
+
+.table-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+}
+
+.section-heading p {
+    color: #64748B;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.view-all {
+    text-decoration: none;
+    background: #4F46E5;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 7px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.view-all:hover {
+    background: #3730A3;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px 12px;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 13px;
+}
+
+th {
+    color: #64748B;
+    background: #F8FAFC;
+}
+
+td {
+    color: #374151;
+}
+
+.priority,
+.status {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #EEF2FF;
+    color: #4F46E5;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.empty {
+    text-align: center;
+    padding: 30px;
+    color: #64748B;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
