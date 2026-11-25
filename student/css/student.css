@@ -215,3 +215,66 @@ th {
         flex-direction: column;
     }
 }
+
+
+form label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #4F46E5;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+    margin-top: 22px;
+}
+
+
+.primary-btn {
+    display: inline-block;
+    background: #4F46E5;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #089B91;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(8, 155, 145, 0.25);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+

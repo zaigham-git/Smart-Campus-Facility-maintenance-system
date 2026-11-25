@@ -121,10 +121,49 @@ require_once 'includes/header.php';
                         <?= htmlspecialchars($row['student_name']) ?>
                     </td>
 
-                    <td>
-                        <?= htmlspecialchars($row['category']) ?><br>
-                        <small><?= htmlspecialchars($row['priority']) ?> priority</small>
-                    </td>
+                    
+<td>
+    <strong>
+        <?= htmlspecialchars($row['category']) ?>
+    </strong>
+
+    <br>
+
+    <small>
+        <?= htmlspecialchars($row['priority']) ?> priority
+    </small>
+
+    <details style="margin-top:10px;">
+        <summary style="color:#4F46E5; cursor:pointer;">
+            View Details
+        </summary>
+
+        <div style="margin-top:10px; max-width:220px;">
+
+            <p>
+                <strong>Description:</strong><br>
+
+                <?= nl2br(htmlspecialchars($row['description'])) ?>
+            </p>
+
+            <?php if (!empty($row['image_path'])): ?>
+
+                <br>
+
+                <a href="../student/<?= htmlspecialchars($row['image_path']) ?>"
+                   target="_blank"
+                   style="color:#4F46E5;">
+
+                    View Complaint Image
+
+                </a>
+
+            <?php endif; ?>
+
+        </div>
+    </details>
+</td>
+
 
                     <td>
                         <?= htmlspecialchars($row['building_name']) ?><br>
