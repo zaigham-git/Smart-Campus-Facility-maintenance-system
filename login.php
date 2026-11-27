@@ -139,14 +139,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Remember me
                 </label>
 
-                <a href="#" class="forgot-link">
-                    Forgot password?
-                </a>
+                <div class="forgot-link">
+    <a href="forget_password.php">Forgot Password?</a>
+</div>
             </div>
 
             <button type="submit" class="btn-submit">
                 Sign In to Portal
             </button>
+
+            <div class="signup-link">
+    Don't have an account?
+    <a href="register.php">Sign Up</a>
+</div>
 
         </form>
 

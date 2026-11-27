@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
     max-width: 420px;
     padding: 40px 35px;
     border-radius: 16px;
-    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08),
                 0 8px 10px -6px rgba(15, 23, 42, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,7 +107,6 @@ body {
     transition: all 0.25s ease;
 }
 
-/* Input Hover & Focus Effects */
 .form-control:hover {
     border-color: #94A3B8;
     background-color: #FFFFFF;
@@ -152,23 +151,8 @@ body {
     transition: color 0.2s ease;
 }
 
-.forgot-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--primary-hover);
-    transition: width 0.25s ease;
-}
-
 .forgot-link:hover {
     color: var(--primary-hover);
-}
-
-.forgot-link:hover::after {
-    width: 100%;
 }
 
 /* Submit Button */
@@ -192,11 +176,6 @@ body {
     box-shadow: 0 8px 20px rgba(79, 70, 229, 0.38);
 }
 
-.btn-submit:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
-}
-
 /* Footer Note */
 .footer-text {
     text-align: center;
@@ -210,12 +189,120 @@ body {
     font-weight: 600;
 }
 
-/* Mobile Responsiveness */
+/* =========================================
+   Forgot Password & OTP Pages
+========================================= */
+.forgot-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card-bg);
+    padding: 38px 35px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08),
+                0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.forgot-card h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.forgot-card > p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.forgot-card label {
+    display: block;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 8px;
+}
+
+.forgot-card input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #F8FAFC;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    color: var(--text-dark);
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.forgot-card input:focus {
+    background-color: #FFFFFF;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+.forgot-card button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary) 0%, #6366F1 100%);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    transition: all 0.3s ease;
+}
+
+.forgot-card button:hover {
+    background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.38);
+}
+
+.forgot-message {
+    padding: 12px 14px;
+    background: #EEF2FF;
+    color: var(--primary-hover);
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 13.5px;
+}
+
+.back-login {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.back-login a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-login a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
 @media (max-width: 480px) {
-    .login-container {
+    .login-container, .forgot-card {
         padding: 30px 22px;
     }
-    .brand-header h1 {
+    .brand-header h1, .forgot-card h2 {
         font-size: 21px;
     }
 }
