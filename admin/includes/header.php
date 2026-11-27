@@ -46,6 +46,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
             <a class="<?= $current_page == 'reports.php' ? 'active' : '' ?>"
                href="reports.php">Generate Reports</a>
+
+            <a href="profile.php"
+                class="<?php echo $currentPage == 'profile.php' ? 'active' : ''; ?>">
+                My Profile
+            </a>
         </nav>
 
         <a href="logout.php" class="logout">Logout</a>

@@ -443,3 +443,78 @@ form textarea:focus {
         flex-wrap: wrap;
     }
 }
+
+
+/* Admin Profile */
+
+.profile-card {
+    background: #FFFFFF;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.profile-heading {
+    margin-bottom: 25px;
+}
+
+.profile-heading h2 {
+    font-size: 20px;
+    color: #111827;
+}
+
+.profile-heading p {
+    color: #64748B;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.profile-card label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+}
+
+.profile-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+}
+
+.profile-card input:focus {
+    border-color: #4F46E5;
+}
+
+.profile-card input:disabled {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+.profile-card .update-btn {
+    margin-top: 22px;
+    background: #4F46E5;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-card .update-btn:hover {
+    background: #3730A3;
+}
+
+.profile-message {
+    background: #EEF2FF;
+    color: #3730A3;
+    padding: 12px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
