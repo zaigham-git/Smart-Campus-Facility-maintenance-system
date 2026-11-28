@@ -83,14 +83,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
     <div class="login-container">
 
         <div class="brand-header">
-            <div class="brand-badge">SC</div>
+            <div class="brand-logo"> <img src="include/smart campus logo.png" height="100px " alt="Smart Campus Logo"></div>
             <h1>Smart Campus</h1>
             <p>Facility & Maintenance Management Portal</p>
         </div>
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         id="email"
                         name="email"
                         class="form-control"
-                        placeholder="name@tuf.edu.pk"
+                        placeholder="name@gmail.com"
                         required
                     >
                 </div>
@@ -148,10 +148,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 Sign In to Portal
             </button>
 
-            <div class="signup-link">
-    Don't have an account?
-    <a href="register.php">Sign Up</a>
-</div>
+            <p class="signup-prompt">
+    Don't have an account? <a href="register.php" class="signup-link">Sign Up</a>
+</p>
 
         </form>
 

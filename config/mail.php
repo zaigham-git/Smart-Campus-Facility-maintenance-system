@@ -24,10 +24,10 @@ function sendOTPEmail($recipientEmail, $otp)
         $mail->SMTPAuth = true;
 
         // Your Gmail Address
-        $mail->Username = 'yourgmail@gmail.com';
+        $mail->Username = 'smartcampushelpcenter@gmail.com';
 
         // Your Gmail App Password
-        $mail->Password = 'YOUR_APP_PASSWORD';
+        $mail->Password = 'ttes jnpp zwno nbay';
 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;

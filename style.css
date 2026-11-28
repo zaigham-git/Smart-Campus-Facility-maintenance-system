@@ -306,3 +306,111 @@ body {
         font-size: 21px;
     }
 }
+
+/* Sign Up Prompt Below Login Button */
+.signup-prompt {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13.5px;
+    color: var(--text-muted);
+}
+
+.signup-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 4px;
+    transition: color 0.2s ease;
+}
+
+.signup-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+
+/* ===== OTP Verification & Reset Password ===== */
+
+.otp-container,
+.reset-container {
+    width: 400px;
+    max-width: 92%;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.otp-container h2,
+.reset-container h2 {
+    color: #172554;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.otp-container p,
+.reset-container p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.otp-container input,
+.reset-container input {
+    width: 100%;
+    padding: 13px;
+    margin: 9px 0 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.otp-container input:focus,
+.reset-container input:focus {
+    border-color: #172554;
+    box-shadow: 0 0 0 3px rgba(23, 37, 84, 0.1);
+}
+
+.otp-container button,
+.reset-container button {
+    width: 100%;
+    padding: 13px;
+    background: #172554;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.otp-container button:hover,
+.reset-container button:hover {
+    background: #263b75;
+}
+
+.otp-container a,
+.reset-container a {
+    display: inline-block;
+    margin-top: 18px;
+    color: #172554;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.otp-container a:hover,
+.reset-container a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .otp-container,
+    .reset-container {
+        padding: 25px;
+    }
+}

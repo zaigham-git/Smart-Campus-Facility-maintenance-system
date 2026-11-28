@@ -289,3 +289,87 @@ td {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =========================================
+   Profile & Task Form Card Styling
+========================================= */
+.task-card {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.profile-card {
+    max-width: 580px;
+}
+
+.profile-card h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.profile-message {
+    padding: 12px 15px;
+    background: #EEF2FF;
+    color: #4F46E5;
+    border-left: 4px solid #4F46E5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+.profile-card label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 7px;
+}
+
+.profile-card input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    background: #F8FAFC;
+    margin-bottom: 18px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-card input:focus {
+    background: #FFFFFF;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.profile-card input:disabled {
+    background: #F1F5F9;
+    color: #64748B;
+    cursor: not-allowed;
+}
+
+.update-btn {
+    padding: 12px 24px;
+    background: #4F46E5;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.update-btn:hover {
+    background: #3730A3;
+    transform: translateY(-1px);
+}

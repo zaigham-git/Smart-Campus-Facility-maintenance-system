@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="brand-header">
 
-            <div class="brand-badge">SC</div>
+            <div class="brand-logo"> <img src="include/smart campus logo.png" height="100px " alt="Smart Campus Logo"></div>
 
             <h1>Smart Campus</h1>
 

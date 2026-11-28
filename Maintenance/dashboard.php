@@ -74,7 +74,7 @@ $recentQuery = $conn->query("
 
     <title>Maintenance Dashboard | Smart Campus</title>
 
-    <link rel="stylesheet" href="css/maintenance.css">
+    <link rel="stylesheet" href="css/maintenance.css?v=4">
 </head>
 
 <body>
